@@ -38,7 +38,7 @@ import SingleGif from './components/SingleGif.vue'
   </div>
     <SingleGif v-bind:url="searchGif" />
     <input v-model="searchTerm" class="mt-14"/>
-    <button @click="search" class="mt-8 mb-6 rounded-md bg-blue-400 hover:scale-110 transform transition duration-300">
+    <button @click="search" class="mt-8 mb-6 rounded-md bg-blue-400 ">
       SEARCH
     </button>
 </div>

@@ -52,10 +52,10 @@ export default {
       randomGif: null,
       trendingGif: null,
       searchGif: null,
-      searchTerm: 'dog'
+      searchTerm: null
     }
   },
-  created () {
+  mounted() {
     axios
       .get('https://api.giphy.com/v1/gifs/random?api_key=91guYgr3J403zwIRDi0ZZNtUsyVZLPiV&limit=10')
       .then(response => (this.randomGif = response.data.data.images.original.url))
@@ -65,7 +65,7 @@ export default {
       .then(response => (this.trendingGif = response.data.data))
 
     axios
-      .get('https://api.giphy.com/v1/gifs/search?api_key=91guYgr3J403zwIRDi0ZZNtUsyVZLPiV&q=' + this.searchTerm +'&limit=1&offset=0&rating=g&lang=en')
+      .get('https://api.giphy.com/v1/gifs/search?api_key=91guYgr3J403zwIRDi0ZZNtUsyVZLPiV&q=dog&limit=1&offset=0&rating=g&lang=en')
       .then(response => (this.searchGif = response.data.data[0].images.original.url))
   },
   methods:{

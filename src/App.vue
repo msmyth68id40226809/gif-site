@@ -52,7 +52,7 @@ export default {
       randomGif: null,
       trendingGif: null,
       searchGif: null,
-      searchTerm: null
+      //searchTerm: null
     }
   },
   mounted() {

@@ -22,9 +22,9 @@ import SingleGif from './components/SingleGif.vue'
   </div>
   </div>
 </div>
-<div class="grid xl:grid-cols-2 md:grid-cols-1 mx-56 ">
-<div class="h-100 w-100 px-10 py-10 mx-auto my-6 max-w-sm bg-gray-900 grid place-content-center">
-  <div class="my-4 text-xl text-white">
+<div class="grid xl:grid-cols-2 md:grid-cols-1 mx-auto max-w-4xl">
+<div class="h-100 w-100 px-10 mx-auto my-6 max-w-sm bg-gray-900 grid place-content-center">
+  <div class="mb-6 text-xl text-white">
     RANDOM
   </div>
     <SingleGif v-bind:url="randomGif" />
@@ -32,13 +32,13 @@ import SingleGif from './components/SingleGif.vue'
       REFRESH
     </button>
 </div>
-<div class="h-100 w-100 px-10 py-10 mx-auto my-6 max-w-sm bg-gray-900 grid place-content-center">
-  <div class="mb-6 text-xl text-white">
+<div class="h-100 w-100 px-10 mx-auto my-6 max-w-sm bg-gray-900 grid place-content-center">
+  <div class="mt-9 mb-6 text-xl text-white">
     SEARCH
   </div>
     <SingleGif v-bind:url="searchGif" />
-    <input v-model="searchTerm" class="mt-14"/>
-    <button @click="search" class="mt-8 mb-6 rounded-md bg-blue-400 ">
+    <input v-model="searchTerm" class="mt-10"/>
+    <button @click="search" class="mt-4 mb-6 rounded-md bg-blue-400 ">
       SEARCH
     </button>
 </div>
